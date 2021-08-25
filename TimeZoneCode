@@ -1,0 +1,10 @@
+List<PicklistEntry> entries = Schema.SObjectType.User.fields.TimeZoneSidKey.picklistValues;
+for(PicklistEntry p : entries){
+System.debug('entries '+p);
+}
+
+dateTime d = dateTime.now();
+String da = d.format('yyyy-MM-dd HH:mm:ss', 'UTC');
+String AccordingCountry = d.format('yyyy-MM-dd HH:mm:ss', 'Pacific/Fiji');
+System.debug('d '+da);
+System.debug('AccordingCountry '+AccordingCountry);
